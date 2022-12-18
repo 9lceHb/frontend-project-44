@@ -1,0 +1,19 @@
+{
+  "name": "brain-games",
+  "version": "1.0.0",
+  "description": "for take some skill for secon project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9lceHb/frontend-project-44.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/9lceHb/frontend-project-44/issues"
+  },
+  "homepage": "https://github.com/9lceHb/frontend-project-44#readme"
+}
