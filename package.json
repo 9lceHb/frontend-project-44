@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "for take some skill for secon project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/9lceHb/frontend-project-44/issues"
   },
-  "homepage": "https://github.com/9lceHb/frontend-project-44#readme"
+  "homepage": "https://github.com/9lceHb/frontend-project-44#readme",
+  "dependencies": {
+    "commander": "^9.4.1"
+  }
 }
