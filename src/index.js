@@ -33,8 +33,7 @@ const game = (name, gameType) => {
   let i = 1;
   while (i < 4) {
     const [question, answer] = gameLogic();
-    const strQuestion = String(question);
-    console.log(`Qusestion: ${strQuestion}`);
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (answer === userAnswer) {
       console.log('Correct!');
