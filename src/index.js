@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 import { gameEven } from './games/even.js';
 import gameCalc from './games/calc.js';
+import gameGcd from './games/gcd.js';
 
 const game = (name, gameType) => {
   let gameLogic;
@@ -10,6 +11,9 @@ const game = (name, gameType) => {
   } else if (gameType === 'calcType') {
     console.log('What is the result of the expression?');
     gameLogic = gameCalc;
+  } else if (gameType === 'gcdType') {
+    console.log('Find the greatest common divisor of given numbers.');
+    gameLogic = gameGcd;
   }
   let i = 1;
   while (i < 4) {
