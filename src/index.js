@@ -3,22 +3,33 @@ import { gameEven } from './games/even.js';
 import gameCalc from './games/calc.js';
 import gameGcd from './games/gcd.js';
 import gameProgression from './games/progression.js';
+import gamePrime from './games/prime.js';
 
-const game = (name, gameType) => {
+const helpFucn = (gameType) => {
   let gameLogic;
+  let text;
   if (gameType === 'evenType') {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    text = 'Answer "yes" if the number is even, otherwise answer "no".';
     gameLogic = gameEven;
   } else if (gameType === 'calcType') {
-    console.log('What is the result of the expression?');
+    text = 'What is the result of the expression?';
     gameLogic = gameCalc;
   } else if (gameType === 'gcdType') {
-    console.log('Find the greatest common divisor of given numbers.');
+    text = 'Find the greatest common divisor of given numbers.';
     gameLogic = gameGcd;
   } else if (gameType === 'progressionType') {
-    console.log('What number is missing in the progression?');
+    text = 'What number is missing in the progression?';
     gameLogic = gameProgression;
+  } else if (gameType === 'primeType') {
+    text = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    gameLogic = gamePrime;
   }
+  return [text, gameLogic];
+};
+
+const game = (name, gameType) => {
+  const [text, gameLogic] = helpFucn(gameType);
+  console.log(text);
   let i = 1;
   while (i < 4) {
     const [question, answer] = gameLogic();
