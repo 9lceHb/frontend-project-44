@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import { gameEven } from './games/even.js';
 import gameCalc from './games/calc.js';
 import gameGcd from './games/gcd.js';
+import gameProgression from './games/progression.js';
 
 const game = (name, gameType) => {
   let gameLogic;
@@ -14,6 +15,9 @@ const game = (name, gameType) => {
   } else if (gameType === 'gcdType') {
     console.log('Find the greatest common divisor of given numbers.');
     gameLogic = gameGcd;
+  } else if (gameType === 'progressionType') {
+    console.log('What number is missing in the progression?');
+    gameLogic = gameProgression;
   }
   let i = 1;
   while (i < 4) {
