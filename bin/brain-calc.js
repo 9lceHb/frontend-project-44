@@ -3,4 +3,4 @@ import welcomeUser from '../src/cli.js';
 import game from '../src/index.js';
 
 const name = welcomeUser();
-game(name, 'evenType');
+game(name, 'calcType');
